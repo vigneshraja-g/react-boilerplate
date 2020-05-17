@@ -14,14 +14,14 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <DefaultErrorBoundary>
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    </DefaultErrorBoundary>
-  </React.StrictMode>,
+  <DefaultErrorBoundary>
+    <BrowserRouter>
+      {/* <React.StrictMode> */}
+      <Provider store={store}>
+        <App />
+      </Provider>
+      {/* </React.StrictMode> */}
+    </BrowserRouter>
+  </DefaultErrorBoundary>,
   document.getElementById('root')
 );
